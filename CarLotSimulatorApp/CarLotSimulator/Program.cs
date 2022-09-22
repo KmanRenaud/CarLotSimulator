@@ -18,9 +18,38 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
-            //*************BONUS*************//
+            Cars Car1 = new Cars();
 
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            Car1.Year = 2007;
+            Car1.Make = "Honda";
+            Car1.Model = "Civic";
+            Car1.EngineNoise = "POP BANG POP";
+            Car1.HonkNoise = "YeeHaw";
+            Car1.IsDriveable = true;
+
+            Car1.MakeEngineNoise(Car1.EngineNoise);
+            Car1.MakeHonkNoise(Car1.HonkNoise);
+
+
+
+            Cars Car2 = new Cars()
+            {
+                Year = 2013,
+                Make = "Nissan",
+                Model = "Altima",
+                EngineNoise = "Sputter-put-put",
+                HonkNoise = "MEEBEHP",
+                IsDriveable = false
+            };
+
+            Car2.MakeEngineNoise(Car2.EngineNoise);
+            Car2.MakeHonkNoise(Car2.HonkNoise);
+
+
+
+            var car3 = new Cars(2023, "Chevorlet", "Tahoe", "Vroom", "BEEP", true);
+
+
 
             //*************BONUS X 2*************//
 
@@ -28,6 +57,28 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+            CarLot carLot1 = new CarLot();
+
+            carLot1.CarList.Add(Car1);
+
+            for (int i = 0; i < carLot1.CarList.Count - 1; i++)
+            {
+                Console.WriteLine(Car1.Year);
+                Console.WriteLine(Car1.Make);
+                Console.WriteLine(Car1.Model);
+                Console.WriteLine(Car1.EngineNoise);
+                Console.WriteLine(Car1.HonkNoise);
+                Console.WriteLine(Car1.IsDriveable);
+
+            }
+
+
+
+
+
+
+
         }
     }
 }
