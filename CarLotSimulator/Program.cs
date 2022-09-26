@@ -18,6 +18,8 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+
+
             Cars Car1 = new Cars();
 
             Car1.Year = 2007;
@@ -27,8 +29,36 @@ namespace CarLotSimulator
             Car1.HonkNoise = "YeeHaw";
             Car1.IsDriveable = true;
 
-            Car1.MakeEngineNoise(Car1.EngineNoise);
-            Car1.MakeHonkNoise(Car1.HonkNoise);
+
+            CarLot carLot1 = new CarLot();
+
+            carLot1.CarList.Add(Car1);
+
+            foreach (var car in carLot1.CarList)
+            {
+                Console.WriteLine($"The first car was made in {Car1.Year}");
+                Console.WriteLine();
+                Console.WriteLine($"The brand of the first car is {Car1.Make}");
+                Console.WriteLine();
+                Console.WriteLine($"The model of the first car is {Car1.Model}");
+                Console.WriteLine();
+                Console.WriteLine($"Is the first car driveable? {Car1.IsDriveable}");
+                Console.WriteLine();
+
+
+            }
+
+
+            Car1.MakeEngineNoise($"{Car1.EngineNoise}");
+            Console.WriteLine();
+            Car1.MakeEngineNoise($"{Car1.HonkNoise}");
+            Console.WriteLine();
+
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
 
 
@@ -42,39 +72,63 @@ namespace CarLotSimulator
                 IsDriveable = false
             };
 
-            Car2.MakeEngineNoise(Car2.EngineNoise);
-            Car2.MakeHonkNoise(Car2.HonkNoise);
 
+
+            CarLot carLot2 = new CarLot();
+
+            carLot2.CarList.Add(Car2);
+
+            foreach (var car in carLot2.CarList)
+            {
+                Console.WriteLine($"The second car was made in {Car2.Year}");
+                Console.WriteLine();
+                Console.WriteLine($"The second brand of the car is {Car2.Make}");
+                Console.WriteLine();
+                Console.WriteLine($"The second model of the car is {Car2.Model}");
+                Console.WriteLine();
+                Console.WriteLine($"Is the second car driveable? {Car2.IsDriveable}");
+                Console.WriteLine();
+
+
+            }
+
+            Car2.MakeEngineNoise($"{Car2.EngineNoise}");
+            Console.WriteLine();
+            Car2.MakeEngineNoise($"{Car2.HonkNoise}");
+            Console.WriteLine();
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
 
             var car3 = new Cars(2023, "Chevorlet", "Tahoe", "Vroom", "BEEP", true);
 
 
 
-            //*************BONUS X 2*************//
+            CarLot carLot3 = new CarLot();
 
-            //Create a CarLot class
-            //It should have at least one property: a List of cars
-            //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
-            //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            carLot3.CarList.Add(car3);
 
-            CarLot carLot1 = new CarLot();
-
-            carLot1.CarList.Add(Car1);
-
-            for (int i = 0; i < carLot1.CarList.Count - 1; i++)
+            foreach (var car in carLot1.CarList)
             {
-                Console.WriteLine(Car1.Year);
-                Console.WriteLine(Car1.Make);
-                Console.WriteLine(Car1.Model);
-                Console.WriteLine(Car1.EngineNoise);
-                Console.WriteLine(Car1.HonkNoise);
-                Console.WriteLine(Car1.IsDriveable);
+                Console.WriteLine($"The third car was made in {car3.Year}");
+                Console.WriteLine();
+                Console.WriteLine($"The brand of third the car is {car3.Make}");
+                Console.WriteLine();
+                Console.WriteLine($"The model of the third car is {car3.Model}");
+                Console.WriteLine();
+                Console.WriteLine($"Is the third car driveable? {car3.IsDriveable}");
+                Console.WriteLine();
 
             }
 
 
-
+            car3.MakeEngineNoise($"{car3.EngineNoise}");
+            Console.WriteLine();
+            car3.MakeEngineNoise($"{car3.HonkNoise}");
+            Console.WriteLine();
 
 
 

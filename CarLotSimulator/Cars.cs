@@ -8,13 +8,17 @@ namespace CarLotSimulator
     {
 
 
-        public Cars()
+        public Cars(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
         {
-
+            Year = year;
+            Make = make;
+            Model = model;
+            EngineNoise = engineNoise;
+            HonkNoise = honkNoise;
+            IsDriveable = isDriveable;
         }
 
-
-        public Cars(int Year, string Make, string Model, string EngineNoise, string HonkNoise, bool IsDriveable)
+        public Cars()
         {
 
         }
