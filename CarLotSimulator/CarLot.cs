@@ -12,8 +12,14 @@ namespace CarLotSimulator
 
 
 
+        public static int carsInLot = 0;
 
 
+
+        public CarLot()
+        {
+            carsInLot++;
+        }
 
 
     }

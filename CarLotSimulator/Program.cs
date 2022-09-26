@@ -49,6 +49,7 @@ namespace CarLotSimulator
             }
 
 
+
             Car1.MakeEngineNoise($"{Car1.EngineNoise}");
             Console.WriteLine();
             Car1.MakeEngineNoise($"{Car1.HonkNoise}");
@@ -56,8 +57,9 @@ namespace CarLotSimulator
 
 
 
+
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine(CarLot.carsInLot);
             Console.WriteLine();
 
 
@@ -98,8 +100,9 @@ namespace CarLotSimulator
             Console.WriteLine();
 
 
+
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine(CarLot.carsInLot);
             Console.WriteLine();
 
 
@@ -131,6 +134,9 @@ namespace CarLotSimulator
             Console.WriteLine();
 
 
+            Console.WriteLine();
+            Console.WriteLine(CarLot.carsInLot);
+            Console.WriteLine();
 
 
         }
